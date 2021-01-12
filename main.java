@@ -44,7 +44,7 @@
               .reduce((total, newQuantity) -> total + newQuantity);
 
           // Output to the output topic.
-          productCounts
+          productCounts 
               .toStream()
               .to("total_purchases", Produced.with(Serdes.String(), Serdes.Integer()));
 
